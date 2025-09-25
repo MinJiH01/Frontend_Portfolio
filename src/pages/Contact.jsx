@@ -8,7 +8,7 @@ function Contact() {
       value: "hmj4196@naver.com",
       description: "언제든지 메일로 연락주세요",
       link: "mailto:hmj4196@naver.com",
-      color: "#EA4335",
+      color: "#646cff",
       available: "24시간 답변"
     },
     {
@@ -17,7 +17,7 @@ function Contact() {
       value: "010-2688-4196",
       description: "전화 상담 가능 시간",
       link: "tel:01026884196",
-      color: "#34A853",
+      color: "#646cff",
       available: "평일 9:00 - 18:00"
     },
     {
@@ -26,7 +26,7 @@ function Contact() {
       value: "github.com/MinJiH01",
       description: "프로젝트 코드 및 활동 확인",
       link: "https://github.com/MinJiH01",
-      color: "#181717",
+      color: "#646cff",
       available: "실시간 업데이트"
     }
   ];
@@ -73,12 +73,12 @@ function Contact() {
           <div className="info-card-clean">
             <div className="info-icon">📍</div>
             <div>
-              <h4>위치</h4>
+              <h4>현재 위치</h4>
               <p>창원, 경상남도</p>
-              <small>대면 미팅 및 면접 가능</small>
+              <small>수도권 근무 가능 (이주 예정)</small>
             </div>
           </div>
-          
+                     
           <div className="info-card-clean">
             <div className="info-icon">⚡</div>
             <div>
@@ -87,13 +87,13 @@ function Contact() {
               <small>빠른 회신 약속</small>
             </div>
           </div>
-          
+                     
           <div className="info-card-clean">
             <div className="info-icon">💼</div>
             <div>
-              <h4>상태</h4>
-              <p>채용 가능</p>
-              <small>새로운 기회를 찾고 있습니다</small>
+              <h4>근무 가능</h4>
+              <p>정규직/계약직</p>
+              <small>새로운 기회를 기다리고 있습니다</small>
             </div>
           </div>
         </div>

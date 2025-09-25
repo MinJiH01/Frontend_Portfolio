@@ -75,7 +75,7 @@ const projectDetails = {
     description: "React와 Markdown을 활용하여 제작한 개인 블로그 웹사이트입니다. 현대적인 UI/UX와 다크모드, 즐겨찾기 등의 기능을 통해 사용자에게 편리한 블로그 경험을 제공합니다.",
     
     projectInfo: {
-      period: "2024.06 - 2024.06 (1개월)",
+      period: "2025.06 - 2025.06 (1개월)",
       team: "개인 프로젝트",
       myRole: "프론트엔드 개발 (100%)",
       status: "완료"
