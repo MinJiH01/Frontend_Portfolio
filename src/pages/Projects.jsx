@@ -4,39 +4,39 @@ import ProjectCard from "../components/ProjectCard";
 
 const projects = [
   {
-    id: "Shopping Mall",
-    title: "Shopping Mall",
-    subtitle: "농산물 직거래 쇼핑몰",
-    description: "Next.js, CSS, TypeScript를 활용한 농산물 직거래 쇼핑몰 사이트",
-    thumbnail: "./Ms_Farm.png",
-    period: "2025.07 - 2025.08",
-    team: "개인 프로젝트",
-    techStack: ["Next.js", "React", "TypeScript", "HTML5", "CSS3"],
-    category: "TypeScript",
-    status: "완료"
-  },
-  {
-    id: "Blog",
-    title: "Personal Blog",
-    subtitle: "개인 블로그 플랫폼",
-    description: "React + Markdown을 사용한 개인 블로그 사이트",
+    id: "Community",
+    title: "Community Site",
+    subtitle: "개발자 커뮤니티 사이트",
+    description: "React + Firebase을 사용한 개발자 커뮤니티 플랫폼",
     thumbnail: "./My_Blog.png",
-    period: "2025.06 - 2025.06",
+    period: "2025.06",
     team: "개인 프로젝트",
-    techStack: ["React", "Markdown", "Vite", "CSS3"],
+    techStack: ["React", "JavaScript", "Firebase", "Markdown", "CSS3"],
     category: "JavaScript",
     status: "완료"
   },
   {
-    id: "Todo-App",
+    id: "Shopping Mall",
+    title: "Shopping Mall",
+    subtitle: "농산물 직거래 쇼핑몰",
+    description: "Next.js, TypeScript, TailwindCSS, Supabase를 활용한 농산물 직거래 쇼핑몰 사이트",
+    thumbnail: "./Ms_Farm.png",
+    period: "2025.07 - 2025.08",
+    team: "개인 프로젝트",
+    techStack: ["Next.js", "TypeScript", "TailwindCSS", "React",  "HTML5"],
+    category: "TypeScript",
+    status: "완료"
+  },
+  {
+    id: "Todo App",
     title: "Weather Todo App",
     subtitle: "개인 일정 관리 어플",
     description: "React Native를 사용한 개인 일정 관리 및 날씨 어플",
     thumbnail: "./Todo_App.png",
-    period: "2025.09 - 2025.09",
+    period: "2025.09",
     team: "개인 프로젝트",
-    techStack: ["React Native", "Java Script", "Expo Go", "CSS3"],
-    category: "React Native",
+    techStack: ["React Native", "TypeScript", "Expo Go", "CSS3"],
+    category: "React Native", 
     status: "완료"
   },
 ];

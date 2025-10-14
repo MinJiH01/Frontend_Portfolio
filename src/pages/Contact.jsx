@@ -74,8 +74,8 @@ function Contact() {
             <div className="info-icon">📍</div>
             <div>
               <h4>현재 위치</h4>
-              <p>창원, 경상남도</p>
-              <small>수도권 근무 가능 (이주 예정)</small>
+              <p>서울특별시</p>
+              <small>즉시 근무 가능</small>
             </div>
           </div>
                      
