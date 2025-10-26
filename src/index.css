@@ -388,10 +388,23 @@ button:focus-visible {
 
 .intro {
   color: var(--text-secondary);
-  font-size: 1rem;
-  line-height: 1.6;
-  max-width: 600px;
-  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 620px;
+  margin: 1.5rem auto 0;
+  text-align: left; 
+  letter-spacing: 0.01em;
+  word-break: keep-all;
+}
+
+.intro strong {
+  color: var(--text-primary);     
+}
+
+.intro br {
+  margin-bottom: 0.6rem;        
+  display: block;
+  content: "";
 }
 
 /* Personal Info */
@@ -2655,4 +2668,1665 @@ button:focus-visible {
   .code-block {
     font-size: 0.75rem;
   }
+}
+
+/* ===== 전문적이고 차분한 디자인으로 통일 ===== */
+
+/* 
+  디자인 철학:
+  - 색상 최소화: Primary 블루만 포인트로 사용
+  - 그레이 톤 기반: 차분하고 전문적인 느낌
+  - 일관성: 모든 박스가 같은 스타일
+*/
+
+/* ===== 임팩트 요약 ===== */
+.impact-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.impact-card {
+  padding: 1.5rem;
+  background: var(--bg-primary);
+  border: 2px solid var(--gray-300);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-normal);
+}
+
+.impact-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.impact-card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.impact-card p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* ===== 배경 카드 ===== */
+.background-card {
+  background: var(--bg-primary);
+  border: 2px solid var(--gray-300);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  margin-bottom: 1.5rem;
+  transition: all var(--transition-normal);
+}
+
+.background-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.background-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.background-card p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin: 0;
+  white-space: pre-line;
+}
+
+/* ===== 목표 리스트 ===== */
+.goals-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.goals-list li {
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.goals-list li:before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* ===== 기술 스택 카드 ===== */
+.tech-stack-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tech-card {
+  background: var(--bg-primary);
+  border: 2px solid var(--gray-300);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  transition: all var(--transition-normal);
+}
+
+.tech-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.tech-card-header {
+  border-bottom: 1px solid var(--gray-200);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tech-title-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tech-title-section h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.tech-category-badge {
+  background: var(--gray-200);
+  color: var(--text-primary);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-md);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.tech-description {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.tech-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ===== 모든 콘텐츠 박스 통일 ===== */
+.tech-content-box,
+.feature-content-box {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-left: 3px solid var(--gray-400);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-normal);
+}
+
+.tech-content-box:hover,
+.feature-content-box:hover {
+  border-left-color: var(--primary);
+  background: white;
+}
+
+.content-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.content-icon {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.content-header h5 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.tech-content-box p,
+.feature-content-box p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+  font-size: 0.9rem;
+  white-space: pre-line;
+  word-wrap: break-word;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* ===== 핵심 배운 점 강조 ===== */
+.tech-key-learning {
+  background: var(--gray-100);
+  border: 2px solid var(--primary);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.tech-key-learning .learning-icon {
+  font-size: 1.3rem;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.tech-key-learning p {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-style: italic;
+  margin: 0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.tech-highlight-box {
+  background: var(--gray-200);
+  color: var(--text-primary);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+  border: 1px solid var(--gray-300);
+}
+
+/* ===== 주요 기능 카드 ===== */
+.features-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.feature-card {
+  background: var(--bg-primary);
+  border: 2px solid var(--gray-300);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  transition: all var(--transition-normal);
+}
+
+.feature-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.feature-card-header {
+  border-bottom: 1px solid var(--gray-200);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.feature-title-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-title-section .feature-icon {
+  font-size: 1.3rem;
+  color: var(--text-muted);
+}
+
+.feature-title-section h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.feature-description {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.feature-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ===== 임팩트 박스 ===== */
+.feature-impact-box,
+.highlight-impact {
+  background: var(--gray-100);
+  border: 2px solid var(--primary);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.feature-impact-box .impact-icon,
+.highlight-impact .impact-icon {
+  font-size: 1.3rem;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.feature-impact-box p,
+.highlight-impact p {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+/* ===== 도전과제 ===== */
+.challenges-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.challenge-item {
+  background: var(--bg-primary);
+  border: 2px solid var(--gray-300);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  transition: all var(--transition-normal);
+}
+
+.challenge-item:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+.challenge-header h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.challenge-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.challenge-box {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-left: 3px solid var(--gray-400);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+}
+
+.challenge-box:hover {
+  border-left-color: var(--primary);
+}
+
+.challenge-box h5 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.challenge-box p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+  font-size: 0.9rem;
+  white-space: pre-line;
+}
+
+.code-block {
+  margin-top: 1rem;
+  background: var(--gray-900);
+  color: var(--gray-100);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  border: 1px solid var(--gray-700);
+}
+
+.code-block pre {
+  margin: 0;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.code-block code {
+  color: var(--gray-100);
+}
+
+/* ===== 회고 섹션 ===== */
+.reflection-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.reflection-category {
+  background: var(--bg-primary);
+  border: 2px solid var(--gray-300);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  transition: all var(--transition-normal);
+}
+
+.reflection-category:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.reflection-category h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--gray-200);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.reflection-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reflection-item {
+  background: var(--gray-50);
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--gray-200);
+  transition: all var(--transition-normal);
+}
+
+.reflection-item:hover {
+  background: white;
+  border-color: var(--primary);
+  transform: translateX(4px);
+}
+
+.reflection-item h5 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.reflection-item h5:before {
+  content: '▸';
+  color: var(--primary);
+  font-size: 0.9rem;
+}
+
+.reflection-item p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+  font-size: 0.9rem;
+  padding-left: 1rem;
+  white-space: pre-line;
+}
+
+/* ===== 하이라이트 섹션 ===== */
+.highlights-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.highlight-card {
+  background: var(--bg-primary);
+  border: 2px solid var(--gray-300);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-normal);
+}
+
+.highlight-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.highlight-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.highlight-detail {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  white-space: pre-line;
+}
+
+/* ===== 스크린샷 그리드 ===== */
+.screenshots-section {
+  margin-top: 1rem;
+}
+
+.screenshots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.screenshot-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--gray-300);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  background: var(--gray-100);
+}
+
+.screenshot-item:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.screenshot-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.screenshot-item:hover img {
+  transform: scale(1.05);
+}
+
+.screenshot-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  padding: 1rem;
+  transform: translateY(100%);
+  transition: transform var(--transition-normal);
+}
+
+.screenshot-item:hover .screenshot-overlay {
+  transform: translateY(0);
+}
+
+.screenshot-overlay p {
+  color: white;
+  font-weight: 600;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* ===== 프로젝트 액션 버튼 ===== */
+.project-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 3rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--gray-200);
+}
+
+.action-btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 2px solid;
+}
+
+.action-btn.primary {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.action-btn.primary:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.action-btn.secondary {
+  background: white;
+  color: var(--text-primary);
+  border-color: var(--gray-300);
+}
+
+.action-btn.secondary:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.action-btn.tertiary {
+  background: var(--gray-100);
+  color: var(--text-secondary);
+  border-color: var(--gray-200);
+}
+
+.action-btn.tertiary:hover {
+  background: var(--gray-200);
+  border-color: var(--gray-300);
+  transform: translateY(-2px);
+}
+
+/* ===== 에러 페이지 ===== */
+.project-detail-error {
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.project-detail-error h2 {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+}
+
+.back-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: var(--primary);
+  color: white;
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all var(--transition-normal);
+  border: 2px solid var(--primary);
+}
+
+.back-btn:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ===== 반응형 디자인 ===== */
+@media (max-width: 768px) {
+  .impact-summary-grid,
+  .screenshots-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-card,
+  .feature-card,
+  .challenge-item,
+  .reflection-category {
+    padding: 1rem;
+  }
+
+  .tech-content-box,
+  .feature-content-box,
+  .challenge-box {
+    padding: 0.75rem;
+  }
+
+  .project-actions {
+    flex-direction: column;
+  }
+
+  .action-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .tech-title-section h4,
+  .feature-title-section h4 {
+    font-size: 1.1rem;
+  }
+}
+
+/* ===== 프린트 스타일 ===== */
+@media print {
+  .project-actions,
+  .tab-navigation {
+    display: none;
+  }
+
+  .tech-card,
+  .feature-card,
+  .challenge-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+/* 모든 텍스트 컨테이너의 줄바꿈 보장 */
+.tech-content-box p,
+.feature-content-box p,
+.challenge-box p,
+.reflection-item p,
+.background-card p,
+.highlight-detail {
+  white-space: pre-line !important;
+  word-wrap: break-word !important;
+  word-break: keep-all !important;
+  overflow-wrap: break-word !important;
+  max-width: 100% !important;
+}
+
+/* ===== 기술 스택 카드 ===== */
+.tech-stack-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tech-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--bg-primary);
+  padding: 1.5rem;
+  border-radius: var(--radius-xl);
+  border: 2px solid var(--gray-300);
+  margin-bottom: 1.5rem;
+  transition: all var(--transition-normal);
+}
+
+.tech-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.tech-card-header {
+  border-bottom: 1px solid var(--gray-200);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tech-title-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tech-title-section h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* 차분한 그레이 배지 */
+.tech-category-badge {
+  background: var(--gray-200);
+  color: var(--text-primary);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-md);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.tech-description {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.tech-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ===== 모든 콘텐츠 박스 - 색상 통일 ===== */
+.tech-content-box,
+.feature-content-box {
+  background: var(--gray-50);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--gray-200);
+  border-left: 3px solid var(--gray-400);
+  transition: all var(--transition-normal);
+}
+
+/* hover 시에만 Primary 색상 */
+.tech-content-box:hover,
+.feature-content-box:hover {
+  border-left-color: var(--primary);
+  background: white;
+}
+
+/* 모든 종류의 박스 색상 제거 - 통일 */
+.tech-content-box.why-chose,
+.tech-content-box.how-used,
+.tech-content-box.challenges,
+.tech-content-box.implementation,
+.tech-content-box.technical,
+.tech-content-box.feedback,
+.feature-content-box.implementation,
+.feature-content-box.technical,
+.feature-content-box.feedback {
+  background: var(--gray-50);
+  border-left-color: var(--gray-400);
+}
+
+.tech-content-box:hover,
+.feature-content-box:hover {
+  border-left-color: var(--primary);
+}
+
+.tech-content-box .content-header,
+.feature-content-box .content-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.tech-content-box .content-icon,
+.feature-content-box .content-icon {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.tech-content-box h5,
+.feature-content-box h5 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.tech-content-box p,
+.feature-content-box p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* ===== 핵심 배운 점 - 차분하게 ===== */
+.tech-key-learning {
+  background: var(--gray-100);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  border: 2px solid var(--primary);
+}
+
+.tech-key-learning .learning-icon {
+  font-size: 1.3rem;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.tech-key-learning p {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-style: italic;
+  margin: 0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* 하이라이트 박스도 차분하게 */
+.tech-highlight-box {
+  background: var(--gray-200);
+  color: var(--text-primary);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+  border: 1px solid var(--gray-300);
+}
+
+/* ===== 기능 카드 ===== */
+.features-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--bg-primary);
+  padding: 1.5rem;
+  border-radius: var(--radius-xl);
+  border: 2px solid var(--gray-300);
+  margin-bottom: 1.5rem;
+  transition: all var(--transition-normal);
+}
+
+/* hover 시에만 Primary */
+.feature-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.feature-card-header {
+  border-bottom: 1px solid var(--gray-200);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.feature-title-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-title-section .feature-icon {
+  font-size: 1.3rem;
+  color: var(--text-muted);
+}
+
+.feature-title-section h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.feature-description {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.feature-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ===== 임팩트 박스 - 차분하게 ===== */
+.feature-impact-box,
+.highlight-impact {
+  background: var(--gray-100);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 2px solid var(--primary);
+}
+
+.feature-impact-box .impact-icon,
+.highlight-impact .impact-icon {
+  font-size: 1.3rem;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.feature-impact-box p,
+.highlight-impact p {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+/* ===== 배경 카드 ===== */
+.background-card {
+  background: var(--bg-primary);
+  border: 2px solid var(--gray-300);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  margin-bottom: 1.5rem;
+  transition: all var(--transition-normal);
+}
+
+.background-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.background-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.background-card p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* 목표 카드도 색상 제거 */
+.background-card.goals {
+  border-color: var(--gray-300);
+}
+
+.background-card.goals:hover {
+  border-color: var(--primary);
+}
+
+/* ===== 목표 리스트 ===== */
+.goals-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.goals-list li {
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* 체크마크도 Primary로 통일 */
+.goals-list li:before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* ===== 도전과제 섹션 ===== */
+.challenges-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.challenge-item {
+  background: var(--bg-primary);
+  border: 2px solid var(--gray-300);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  transition: all var(--transition-normal);
+}
+
+.challenge-item:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+.challenge-header h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.challenge-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* 도전과제 박스들도 모두 통일 */
+.challenge-box {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-left: 3px solid var(--gray-400);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-normal);
+}
+
+.challenge-box:hover {
+  border-left-color: var(--primary);
+}
+
+.challenge-box h5 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.challenge-box p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* 코드 블록 */
+.code-block {
+  margin-top: 1rem;
+  background: var(--gray-900);
+  color: var(--gray-100);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  border: 1px solid var(--gray-700);
+}
+
+.code-block pre {
+  margin: 0;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.code-block code {
+  color: var(--gray-100);
+}
+
+/* ===== 임팩트 요약 그리드 ===== */
+.impact-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.impact-card {
+  padding: 1.5rem;
+  background: var(--bg-primary);
+  border: 2px solid var(--gray-300);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-normal);
+}
+
+.impact-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.impact-card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.impact-card p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* ===== 회고 섹션 ===== */
+.reflection-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.reflection-category {
+  background: var(--bg-primary);
+  border: 2px solid var(--gray-300);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  transition: all var(--transition-normal);
+}
+
+.reflection-category:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.reflection-category h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--gray-200);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.reflection-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reflection-item {
+  background: var(--gray-50);
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--gray-200);
+  transition: all var(--transition-normal);
+}
+
+.reflection-item:hover {
+  background: white;
+  border-color: var(--primary);
+  transform: translateX(4px);
+}
+
+.reflection-item h5 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.reflection-item h5:before {
+  content: '▸';
+  color: var(--primary);
+  font-size: 0.9rem;
+}
+
+.reflection-item p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+  font-size: 0.9rem;
+  padding-left: 1rem;
+}
+
+/* ===== 하이라이트 섹션 ===== */
+.highlights-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.highlight-card {
+  background: var(--bg-primary);
+  border: 2px solid var(--gray-300);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-normal);
+}
+
+.highlight-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.highlight-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.highlight-detail {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* ===== 스크린샷 그리드 ===== */
+.screenshots-section {
+  margin-top: 1rem;
+}
+
+.screenshots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.screenshot-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--gray-300);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  background: var(--gray-100);
+}
+
+.screenshot-item:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.screenshot-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.screenshot-item:hover img {
+  transform: scale(1.05);
+}
+
+.screenshot-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  padding: 1rem;
+  transform: translateY(100%);
+  transition: transform var(--transition-normal);
+}
+
+.screenshot-item:hover .screenshot-overlay {
+  transform: translateY(0);
+}
+
+.screenshot-overlay p {
+  color: white;
+  font-weight: 600;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* ===== 프로젝트 액션 버튼 ===== */
+.project-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 3rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--gray-200);
+}
+
+.action-btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 2px solid;
+}
+
+.action-btn.primary {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.action-btn.primary:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.action-btn.secondary {
+  background: white;
+  color: var(--text-primary);
+  border-color: var(--gray-300);
+}
+
+.action-btn.secondary:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.action-btn.tertiary {
+  background: var(--gray-100);
+  color: var(--text-secondary);
+  border-color: var(--gray-200);
+}
+
+.action-btn.tertiary:hover {
+  background: var(--gray-200);
+  border-color: var(--gray-300);
+  transform: translateY(-2px);
+}
+
+/* ===== 반응형 디자인 ===== */
+@media (max-width: 768px) {
+  .impact-summary-grid,
+  .screenshots-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-card,
+  .feature-card,
+  .challenge-item,
+  .reflection-category {
+    padding: 1rem;
+  }
+
+  .tech-content-box,
+  .feature-content-box,
+  .challenge-box {
+    padding: 0.75rem;
+  }
+
+  .tech-title-section h4,
+  .feature-title-section h4 {
+    font-size: 1.1rem;
+  }
+
+  .project-actions {
+    flex-direction: column;
+  }
+
+  .action-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ===== 에러 페이지 ===== */
+.project-detail-error {
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.project-detail-error h2 {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+}
+
+.back-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: var(--primary);
+  color: white;
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all var(--transition-normal);
+  border: 2px solid var(--primary);
+}
+
+.back-btn:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ===== 도전과제 박스 색상 완전히 제거 ===== */
+
+/* 모든 challenge-box 색상 통일 */
+.challenge-box {
+  background: var(--gray-50) !important;
+  border: 1px solid var(--gray-200) !important;
+  border-left: 3px solid var(--gray-400) !important;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-normal);
+}
+
+.challenge-box:hover {
+  border-left-color: var(--primary) !important;
+  background: white !important;
+}
+
+/* 개별 클래스 색상 강제 제거 */
+.challenge-box.context,
+.challenge-box.problem,
+.challenge-box.solution,
+.challenge-box.result,
+.challenge-box.learned {
+  background: var(--gray-50) !important;
+  border: 1px solid var(--gray-200) !important;
+  border-left: 3px solid var(--gray-400) !important;
+}
+
+.challenge-box.context:hover,
+.challenge-box.problem:hover,
+.challenge-box.solution:hover,
+.challenge-box.result:hover,
+.challenge-box.learned:hover {
+  border-left-color: var(--primary) !important;
+  background: white !important;
+}
+
+/* ===== 주요 기능 내부 박스들만 너비 조정 ===== */
+
+/* 주요 기능 카드 내부의 콘텐츠 박스들 */
+.feature-card-body {
+  display: grid;
+  grid-template-columns: 1fr; /* 단일 컬럼으로 꽉 채우기 */
+  gap: 1rem;
+  width: 100%;
+}
+
+/* 주요 기능 내부 박스들 전체 너비 */
+.feature-card-body .feature-content-box {
+  width: 100%;
+  min-width: 0; /* 그리드 오버플로우 방지 */
+  background: var(--gray-50);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--gray-200);
+  border-left: 3px solid var(--gray-400);
+  transition: all var(--transition-normal);
+  box-sizing: border-box;
+}
+
+/* 주요 기능 임팩트 박스도 전체 너비 */
+.feature-card-body .feature-impact-box {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* ===== 구현 과정 박스 색상 제거 ===== */
+.feature-content-box.implementation,
+.feature-content-box.challenge-story,
+.feature-content-box.impl,
+.feature-content-box.performance,
+.feature-content-box.opt,
+.feature-content-box.ux,
+.feature-content-box.actual-impact,
+.feature-content-box.swipe,
+.feature-content-box.dark-mode,
+.feature-content-box.code-theme,
+.feature-content-box.holiday,
+.feature-content-box.technical,
+.feature-content-box.feedback {
+  background: var(--gray-50) !important;
+  border: 1px solid var(--gray-200) !important;
+  border-left: 3px solid var(--gray-400) !important;
+}
+
+.feature-content-box.implementation:hover,
+.feature-content-box.challenge-story:hover,
+.feature-content-box.impl:hover,
+.feature-content-box.performance:hover,
+.feature-content-box.opt:hover,
+.feature-content-box.ux:hover,
+.feature-content-box.actual-impact:hover,
+.feature-content-box.swipe:hover,
+.feature-content-box.dark-mode:hover,
+.feature-content-box.code-theme:hover,
+.feature-content-box.holiday:hover,
+.feature-content-box.technical:hover,
+.feature-content-box.feedback:hover {
+  border-left-color: var(--primary) !important;
+  background: white !important;
+}
+
+/* ===== 기술 스택은 원래대로 유지 ===== */
+/* 기술 스택 내부 박스들도 grid 적용 */
+.tech-card-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 100%;
+}
+
+.tech-card-body .tech-content-box,
+.tech-card-body .tech-key-learning,
+.tech-card-body .tech-highlight-box {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* ===== 반응형 ===== */
+@media (max-width: 768px) {
+  .feature-card-body,
+  .tech-card-body {
+    gap: 0.75rem;
+  }
+
+  .feature-content-box,
+  .tech-content-box {
+    padding: 0.75rem;
+  }
+}
+
+/* ===== 추가: 모든 컬러풀한 배경 강제 제거 ===== */
+[class*='challenge-box'],
+[class*='feature-content-box'],
+[class*='tech-content-box'] {
+  background: var(--gray-50) !important;
+  border: 1px solid var(--gray-200) !important;
+  border-left: 3px solid var(--gray-400) !important;
+}
+
+[class*='challenge-box']:hover,
+[class*='feature-content-box']:hover,
+[class*='tech-content-box']:hover {
+  border-left-color: var(--primary) !important;
+  background: white !important;
 }
