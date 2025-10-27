@@ -831,7 +831,7 @@ export const projectsData = {
       ]
     },
     
-    demoUrl: "https://community-e8f96.web.app/",
+    demoUrl: "https://my-blog-chi-black.vercel.app/",
     githubUrl: "https://github.com/MinJiH01/Community"
   },
 
