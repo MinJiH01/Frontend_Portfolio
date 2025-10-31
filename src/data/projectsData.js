@@ -832,7 +832,7 @@ export const projectsData = {
     },
     
     demoUrl: "https://my-blog-chi-black.vercel.app/",
-    githubUrl: "https://github.com/MinJiH01/Community"
+    githubUrl: "https://github.com/MinJiH01/My_Blog"
   },
 
   // ========================================
